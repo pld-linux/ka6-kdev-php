@@ -18,14 +18,17 @@ Source0:	https://download.kde.org/stable/release-service/%{kdeappsver}/src/%{kan
 # Source0-md5:	b1ac2d45447fc6c7cb53ef9e170de119
 URL:		http://www.kdevelop.org/
 BuildRequires:	Qt6Core-devel >= 5.15.2
+BuildRequires:	Qt6Qt5Compat-devel >= 6.0.0
 BuildRequires:	Qt6Gui-devel >= 5.15.2
 BuildRequires:	Qt6Test-devel
+BuildRequires:	Qt6WebEngine-devel >= 6.5.0
 BuildRequires:	Qt6Widgets-devel >= 5.15.2
 BuildRequires:	gettext-devel
 BuildRequires:	ka6-kdevelop-devel >= %{kdeappsver}
 BuildRequires:	ka6-kdevelop-pg-qt
 BuildRequires:	kf6-extra-cmake-modules >= 5.78.0
 BuildRequires:	kf6-kauth-devel >= 5.105.0
+BuildRequires:	kf6-kcmutils-devel >= 6.0.0
 BuildRequires:	kf6-kcodecs-devel >= 5.105.0
 BuildRequires:	kf6-kcompletion-devel >= 5.105.0
 BuildRequires:	kf6-kconfigwidgets-devel >= 5.105.0
