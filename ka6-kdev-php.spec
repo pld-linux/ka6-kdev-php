@@ -11,7 +11,7 @@ Summary:	KDE Integrated Development Environment - php
 Summary(pl.UTF-8):	Zintegrowane środowisko programisty dla KDE - php
 Name:		ka6-%{kaname}
 Version:	25.08.2
-Release:	1
+Release:	2
 License:	GPL
 Group:		X11/Development/Tools
 Source0:	https://download.kde.org/stable/release-service/%{kdeappsver}/src/%{kaname}-%{version}.tar.xz
