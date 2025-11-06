@@ -2,7 +2,7 @@
 # Conditional build:
 %bcond_with	tests		# build with tests
 
-%define		kdeappsver	25.08.2
+%define		kdeappsver	25.08.3
 %define		kframever	5.103.0
 %define		qtver		5.15.2
 %define		kaname		kdev-php
@@ -10,16 +10,16 @@
 Summary:	KDE Integrated Development Environment - php
 Summary(pl.UTF-8):	Zintegrowane środowisko programisty dla KDE - php
 Name:		ka6-%{kaname}
-Version:	25.08.2
-Release:	2
+Version:	25.08.3
+Release:	1
 License:	GPL
 Group:		X11/Development/Tools
 Source0:	https://download.kde.org/stable/release-service/%{kdeappsver}/src/%{kaname}-%{version}.tar.xz
-# Source0-md5:	bc8793a8b490fb2c0b2aaeb4ca8a12c2
+# Source0-md5:	a85a24eb966be332cb6d28328a2130e7
 URL:		http://www.kdevelop.org/
 BuildRequires:	Qt6Core-devel >= 5.15.2
-BuildRequires:	Qt6Qt5Compat-devel >= 6.0.0
 BuildRequires:	Qt6Gui-devel >= 5.15.2
+BuildRequires:	Qt6Qt5Compat-devel >= 6.0.0
 BuildRequires:	Qt6Test-devel
 BuildRequires:	Qt6WebEngine-devel >= 6.5.0
 BuildRequires:	Qt6Widgets-devel >= 5.15.2
@@ -88,12 +88,12 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %{_includedir}/kdev-php
 %{_libdir}/cmake/KDevPHP
-%attr(755,root,root) %{_libdir}/libkdevphpcompletion.so
-%attr(755,root,root) %{_libdir}/libkdevphpduchain.so
-%attr(755,root,root) %{_libdir}/libkdevphpparser.so
-%attr(755,root,root) %{_libdir}/qt6/plugins/kdevplatform/6?/kdevphpdocs.so
-%attr(755,root,root) %{_libdir}/qt6/plugins/kdevplatform/6?/kdevphplanguagesupport.so
-%attr(755,root,root) %{_libdir}/qt6/plugins/kdevplatform/6?/kdevphpunitprovider.so
+%{_libdir}/libkdevphpcompletion.so
+%{_libdir}/libkdevphpduchain.so
+%{_libdir}/libkdevphpparser.so
+%{_libdir}/qt6/plugins/kdevplatform/6?/kdevphpdocs.so
+%{_libdir}/qt6/plugins/kdevplatform/6?/kdevphplanguagesupport.so
+%{_libdir}/qt6/plugins/kdevplatform/6?/kdevphpunitprovider.so
 %{_datadir}/kdevappwizard/templates/simple_phpapp.tar.bz2
 %dir %{_datadir}/kdevphpsupport
 %{_datadir}/kdevphpsupport/phpfunctions.php
