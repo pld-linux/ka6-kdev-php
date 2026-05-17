@@ -58,6 +58,9 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %description
 KDE Integrated Development Environment - php.
 
+%description -l pl.UTF-8
+Zintegrowane środowisko programistyczne KDE dla języka PHP.
+
 %prep
 %setup -q -n %{kaname}-%{version}
 
