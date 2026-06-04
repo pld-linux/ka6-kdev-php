@@ -2,7 +2,7 @@
 # Conditional build:
 %bcond_with	tests		# build with tests
 
-%define		kdeappsver	26.04.1
+%define		kdeappsver	26.04.2
 %define		kframever	5.103.0
 %define		qtver		5.15.2
 %define		kaname		kdev-php
@@ -10,12 +10,12 @@
 Summary:	KDE Integrated Development Environment - php
 Summary(pl.UTF-8):	Zintegrowane środowisko programisty dla KDE - php
 Name:		ka6-%{kaname}
-Version:	26.04.1
+Version:	26.04.2
 Release:	1
 License:	GPL
 Group:		X11/Development/Tools
 Source0:	https://download.kde.org/stable/release-service/%{kdeappsver}/src/%{kaname}-%{version}.tar.xz
-# Source0-md5:	e5a40897b4bb8b06b08d7ef899fe02ec
+# Source0-md5:	dd7ce808d8fdb3745b12477eb1870f63
 URL:		http://www.kdevelop.org/
 BuildRequires:	Qt6Core-devel >= 5.15.2
 BuildRequires:	Qt6Gui-devel >= 5.15.2
@@ -25,7 +25,7 @@ BuildRequires:	Qt6WebEngine-devel >= 6.5.0
 BuildRequires:	Qt6Widgets-devel >= 5.15.2
 BuildRequires:	gettext-devel
 BuildRequires:	ka6-kdevelop-devel >= %{kdeappsver}
-BuildRequires:	ka6-kdevelop-pg-qt
+BuildRequires:	ka6-kdevelop-pg-qt >= 2.4.0
 BuildRequires:	kf6-extra-cmake-modules >= 5.78.0
 BuildRequires:	kf6-kauth-devel >= 5.105.0
 BuildRequires:	kf6-kcmutils-devel >= 6.0.0
