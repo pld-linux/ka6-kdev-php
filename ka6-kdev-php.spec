@@ -3,8 +3,8 @@
 %bcond_with	tests		# build with tests
 
 %define		kdeappsver	26.08.0
-%define		kframever	5.103.0
-%define		qtver		5.15.2
+%define		kframever	6.0.0
+%define		qtver		6.5.0
 %define		kaname		kdev-php
 
 Summary:	KDE Integrated Development Environment - php
@@ -17,38 +17,24 @@ Group:		X11/Development/Tools
 Source0:	https://download.kde.org/stable/release-service/%{kdeappsver}/src/%{kaname}-%{version}.tar.xz
 # Source0-md5:	ec069b842f4e32968793add5a22f8844
 URL:		http://www.kdevelop.org/
-BuildRequires:	Qt6Core-devel >= 5.15.2
-BuildRequires:	Qt6Gui-devel >= 5.15.2
-BuildRequires:	Qt6Qt5Compat-devel >= 6.0.0
-BuildRequires:	Qt6Test-devel
-BuildRequires:	Qt6WebEngine-devel >= 6.5.0
-BuildRequires:	Qt6Widgets-devel >= 5.15.2
-BuildRequires:	gettext-devel
+BuildRequires:	Qt6Core-devel >= %{qtver}
+%{?with_tests:BuildRequires:	Qt6Test-devel >= %{qtver}}
+BuildRequires:	Qt6Widgets-devel >= %{qtver}
+BuildRequires:	cmake >= 3.16
+BuildRequires:	gettext-tools
 BuildRequires:	ka6-kdevelop-devel >= %{kdeappsver}
 BuildRequires:	ka6-kdevelop-pg-qt >= 2.4.0
-BuildRequires:	kf6-extra-cmake-modules >= 5.78.0
-BuildRequires:	kf6-kauth-devel >= 5.105.0
-BuildRequires:	kf6-kcmutils-devel >= 6.0.0
-BuildRequires:	kf6-kcodecs-devel >= 5.105.0
-BuildRequires:	kf6-kcompletion-devel >= 5.105.0
-BuildRequires:	kf6-kconfigwidgets-devel >= 5.105.0
-BuildRequires:	kf6-kcoreaddons-devel >= 5.105.0
-BuildRequires:	kf6-ki18n-devel >= 5.105.0
-BuildRequires:	kf6-kitemviews-devel >= 5.105.0
-BuildRequires:	kf6-kjobwidgets-devel >= 5.105.0
-BuildRequires:	kf6-kparts-devel >= 5.105.0
-BuildRequires:	kf6-kservice-devel >= 5.105.0
-BuildRequires:	kf6-ktexteditor-devel >= 5.91.0
-BuildRequires:	kf6-ktextwidgets-devel >= 5.105.0
-BuildRequires:	kf6-kwidgetsaddons-devel >= 5.105.0
-BuildRequires:	kf6-kxmlgui-devel >= 5.105.0
-BuildRequires:	kf6-solid-devel >= 5.105.0
-BuildRequires:	kf6-sonnet-devel >= 5.105.0
-BuildRequires:	kf6-syntax-highlighting-devel >= 5.105.0
-BuildRequires:	kf6-threadweaver-devel >= 5.91.0
+BuildRequires:	kf6-extra-cmake-modules >= %{kframever}
+BuildRequires:	kf6-threadweaver-devel >= %{kframever}
+BuildRequires:	kf6-ktexteditor-devel >= %{kframever}
+BuildRequires:	kf6-ki18n-devel >= %{kframever}
+BuildRequires:	kf6-kcmutils-devel >= %{kframever}
+BuildRequires:	libstdc++-devel
 BuildRequires:	ninja
 BuildRequires:	pkgconfig
-BuildRequires:	rpmbuild(macros) >= 1.600
+BuildRequires:	rpmbuild(macros) >= 1.736
+BuildRequires:	tar >= 1:1.22
+BuildRequires:	xz
 Requires:	ka6-kdevelop
 %requires_eq_to Qt6Core Qt6Core-devel
 Obsoletes:	ka5-%{kaname} < %{version}
